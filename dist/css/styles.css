@@ -11065,7 +11065,7 @@ body {
   height: auto;
   min-height: 35rem;
   padding: 15rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7), #000), url("../../assets/img/dock.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -11146,6 +11146,24 @@ body {
   }
 }
 
+/* By default, the image will be black and white */
+.grayscale-hover {
+  filter: grayscale(100%);
+  transition: filter 0.3s ease; /* Smooth transition */
+}
+
+/* When hovered, the grayscale is removed, and the image will show in full color */
+.grayscale-hover:hover {
+  filter: grayscale(0%);
+}
+
+/* Disable the grayscale effect on mobile devices */
+@media (max-width: 767px) {
+  .grayscale-hover {
+    filter: none; /* Remove the grayscale filter */
+    transition: none; /* Disable transition effect on mobile */
+  }
+}
 .signup-section {
   padding: 10rem 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../assets/img/bg-signup.jpg");

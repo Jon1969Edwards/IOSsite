@@ -32,3 +32,22 @@
         }
     }
 }
+
+/* By default, the image will be black and white */
+.grayscale-hover {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease; /* Smooth transition */
+}
+
+/* When hovered, the grayscale is removed, and the image will show in full color */
+.grayscale-hover:hover {
+    filter: grayscale(0%);
+}
+
+/* Disable the grayscale effect on mobile devices */
+@media (max-width: 767px) {
+    .grayscale-hover {
+        filter: none; /* Remove the grayscale filter */
+        transition: none; /* Disable transition effect on mobile */
+    }
+}
