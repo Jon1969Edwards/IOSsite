@@ -2,4 +2,4 @@ node_modules
 .DS_Store
 .env
 # Comment out or remove the dist folder if it's ignored
-# dist/
+dist/
