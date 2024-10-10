@@ -12,13 +12,13 @@ const destPath = upath.resolve(upath.dirname(__filename), '../docs/css/styles.cs
 
 module.exports = function renderSCSS() {
     
-    const results = sass.renderSync({
-        data: entryPoint,
-        includePaths: [
+    const results = sass.compileString(entryPoint, {
+        loadPaths: [
             upath.resolve(upath.dirname(__filename), '../node_modules')
-        ],
-      });
-
+        ]
+    });
+    
+    // Ensure destination directory exists
     const destPathDirname = upath.dirname(destPath);
     if (!sh.test('-e', destPathDirname)) {
         sh.mkdir('-p', destPathDirname);
