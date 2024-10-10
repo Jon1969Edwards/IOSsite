@@ -606,6 +606,12 @@ progress {
   height: auto;
 }
 
+@media (max-width: 767px) {
+  .img-fluid {
+      margin-bottom: -9px;
+  }
+}
+
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
@@ -11108,6 +11114,7 @@ body {
 }
 
 .about-section {
+  margin-top: -1px;
   padding-top: 10rem;
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
 }
@@ -11117,6 +11124,7 @@ body {
 
 .projects-section {
   padding: 10rem 0;
+  margin-top: -20px;
 }
 .projects-section .featured-text {
   padding: 2rem;
@@ -11129,6 +11137,7 @@ body {
 }
 .projects-section .featured-text2 {
   padding: 2rem;
+  margin-top: -20px;
 }
 @media (min-width: 992px) {
   .projects-section .featured-text2 {

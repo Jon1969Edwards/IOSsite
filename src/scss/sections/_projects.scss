@@ -4,6 +4,7 @@
 
 .projects-section {
     padding: 10rem 0;
+    margin-top: -20px;
 
     .featured-text {
         padding: 2rem;
@@ -16,6 +17,7 @@
 
     .featured-text2 {
         padding: 2rem;
+        margin-top: -20px;
 
         @include media-breakpoint-up(lg) {
             padding: 0 0 0 2rem;
