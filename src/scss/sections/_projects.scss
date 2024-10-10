@@ -4,6 +4,7 @@
 
 .projects-section {
     padding: 10rem 0;
+    margin-top: -20px;
 
     .featured-text {
         padding: 2rem;
@@ -14,6 +15,16 @@
         }
     }
 
+    .featured-text2 {
+        padding: 2rem;
+        margin-top: -20px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 0 0 0 2rem;
+            border-right: 0.5rem solid $primary;
+        }
+    }
+
     .project-text {
         padding: 3rem;
         font-size: 90%;
@@ -21,5 +32,24 @@
         @include media-breakpoint-up(lg) {
             padding: 5rem;
         }
+    }
+}
+
+/* By default, the image will be black and white */
+.grayscale-hover {
+    filter: grayscale(100%);
+    transition: filter 0.3s ease; /* Smooth transition */
+}
+
+/* When hovered, the grayscale is removed, and the image will show in full color */
+.grayscale-hover:hover {
+    filter: grayscale(0%);
+}
+
+/* Disable the grayscale effect on mobile devices */
+@media (max-width: 767px) {
+    .grayscale-hover {
+        filter: none; /* Remove the grayscale filter */
+        transition: none; /* Disable transition effect on mobile */
     }
 }

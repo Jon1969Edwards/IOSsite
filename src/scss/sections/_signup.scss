@@ -3,16 +3,35 @@
 // 
 
 .signup-section {
+    position: relative;
     padding: 10rem 0;
     background: linear-gradient(to bottom,
         #{fade-out($black, 0.9)} 0%,
         #{fade-out($black, 0.5)} 75%,
-        $black 100%),
-    url("../assets/img/bg-signup.jpg");
+        $black 100%);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-size: cover;
+}
+
+.signup-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, white, rgba(255, 255, 255, 0) 30%),
+                url("../../assets/img/VWR_Project_Management_.png") center center/cover no-repeat;
+    filter: grayscale(100%);
+    z-index: 1;
+    opacity: 0.7; /* Adjust this if necessary */
+}
+
+.signup-section * {
+    position: relative;
+    z-index: 2; /* Ensure content appears above the image */
 
     .form-signup {
         input {
